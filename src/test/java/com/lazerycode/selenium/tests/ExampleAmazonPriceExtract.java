@@ -35,6 +35,10 @@ public class ExampleAmazonPriceExtract extends DriverBase {
 	}
 
 	private void processProduct(WebDriver driver, WebElement element) {
+		
+	}
+
+	private void processProductOld(WebDriver driver, WebElement element) {
 		// Enter something to search for
 		element.clear();
 		element.sendKeys("Cheese!");
