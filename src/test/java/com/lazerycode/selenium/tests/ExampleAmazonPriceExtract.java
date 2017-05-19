@@ -11,13 +11,12 @@ import com.lazerycode.selenium.DriverBase;
 
 public class ExampleAmazonPriceExtract extends DriverBase {
 
-	public void googleCheeseExample() throws Exception {
+	public void processAsin(String asin) throws Exception {
 		// Create a new WebDriver instance
 		// Notice that the remainder of the code relies on the interface,
 		// not the implementation.
 		WebDriver driver = getDriver();
 
-		String asin = "1784394351";
 		System.out.println("ASIN to Crawl: " + asin);
 
 		// Open Product Page
@@ -64,7 +63,8 @@ public class ExampleAmazonPriceExtract extends DriverBase {
 		try {
 			DriverBase.instantiateDriverObject();
 
-			example.googleCheeseExample();
+			String asin = "1784394351";
+			example.processAsin( asin );
 
 			DriverBase.clearCookies();
 
